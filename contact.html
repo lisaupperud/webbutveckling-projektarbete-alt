@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html land="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- favicon -->
+    <link rel="icon" href="favicon(1).ico">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="technical.html">Technical Skills</a></li>
+                <li><a href="cv.html">CV and Cover Letter</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sections">
+            <article class="articles">
+                <h2>E-mail</h2>
+                <p><a href="mailto:lisa.upp@hotmail.com">Send me an e-mail!</a></p>
+            </article>
+
+            <article class="articles">
+                <h2>Phone</h2>
+                <p><a href="tel:+46708543962">Give me a call or send a text!</a></p>
+            </article>
+
+            <article class="articles">
+                <h2>GitHub</h2>
+                <p><a href="https://github.com/lisaupperud">Check out my GitHub</a></p>
+            </article>
+
+            <article class="articles">
+                <h2>LinkedIn</h2>
+                <p><a href="www.linkedin.com/in/lisa-upperud-2b7383160">Add me on LinkedIn</a></p>
+            </article>
+
+            <article class="articles">
+                <h2>Or contact me here!</h2>
+                <p>(* = not required)</p>
+                <form action="/submit" method="post">
+                    <!-- namn -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <!-- email -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <!-- tel nummer -->
+                    <label for="phone">Phone number*:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <br>
+                    <!-- fält för ämne -->
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <br>
+                    <!-- textruta för meddelande -->
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                    <br>
+                    <!-- inforuta och kryss -->
+                    <a href="integrity.html">Please read the Integricy Policy about your data is handled.</a>
+                    <p>I have read, understood and agree to the Policy</p>
+                    <input type="checkbox" id="yes" name="policy" value="yes">
+                    <label for="yes">Yes, I agree</label>
+                    <br>
+                    <input type="checkbox" id="no" name="policy" value="no">
+                    <label for="no">No, I don't agree</label>
+                    <br>
+                    <!-- skicka-knapp -->
+                    <input type="submit" value="Send">
+
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>@ 2025 Lisa Upperud. All Rights Reserved</p>
+
+        <nav>
+            <ul>
+                <li><a href="integrity.html">Integrity Policy</a></li>
+                <li><a href="mailto:lisa.upp@hotmail.com">E-mail</a></li>
+                <li><a href="tel:+46708543962">Telephone</a></li>
+                <li><a href="www.linkedin.com/in/lisa-upperud-2b7383160">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

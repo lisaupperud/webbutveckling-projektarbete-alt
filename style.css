@@ -1,0 +1,293 @@
+/* ta upp hela sidans höjd
+   ta bort standardmarginaler och -padding*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex; /* aktiverar flexbox */
+    flex-direction: column;
+}
+
+/*-------------HEADER-------------*/
+header {
+    display: flex;
+    /* aktiverar flexbox */
+    justify-content: space-between;
+    /* h-justering / mitten av containern */
+    align-items: center;
+    /* v-justering / mitten av containern */
+    padding: 10px 20px;
+    /* utrymme mellan container och ram */
+    position: sticky;
+    /* header följer med vis scroll */
+    top: 0;
+    /* header går ända längst upp */
+    z-index: 1000;
+    /* header ligger ovanpå annat innehåll */
+    width: 100%;
+    /* container täcker hela skärmen */
+    background-color: #1e293b;
+}
+
+/*-- nav lista --*/
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    /* lägger listobjekt på rad */
+    list-style-type: none;
+    /* tar bort punkter från listan */
+    margin: 0%;
+    /* tar bort standardmarginaler */
+    padding: 30px;
+    /* */
+    gap: 20px;
+    /* mellanrum mellan listobjekt */
+}
+
+/*-- nav länkar --*/
+header nav a {
+    white-space: nowrap;
+    /* förhindra radbrytning i länkarna */
+    text-decoration: none;
+    /* ta bort understryckning */
+    border: 2px solid transparent;
+    /* ram som syns vid hover */
+    padding: 5px 10px;
+    /* padding för bättre synlighet */
+    font-family: "Open Sans", "Roboto", sans-serif;
+    color: #3b82f6;
+}
+
+/*-- länkar --*/
+header a:hover {
+    color: rgba(173, 216, 230, 0.8);
+}
+
+/*-- header h1 --*/
+header h1 {
+    font-family: "Poppins", "Roboto", sans-serif;
+    color: rgba(173, 216, 230, 0.8);
+}
+/*-------------------- MAIN ----------------*/
+/*------------- HERO IMAGE ------------*/
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(headerimage.jpeg);
+
+    height: 100vh;
+    /* full höjd av skärmen*/
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-- välkomsttexts --*/
+.hero-text {
+    text-align: center;
+    color: black;
+    font-family: "Open Sans", "Roboto", sans-serif;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+/*-- artikel design --*/
+article {
+    margin-top: 200px;
+    padding: 20px 20px;
+    background-color: rgba(173, 216, 230, 0.8);
+    border-radius: 10px;
+    max-width: 50%;
+}
+
+/*-- learn more knapp --*/
+
+/* centrera kanppen */
+#button-container {
+    display: flex;
+    justify-content: center; /* h centrering */
+    align-items: center; /* v centrering*/
+    position: relative; /* position = relativ till andra element */
+    margin-top: auto; /* placera knapppen ovanför footer */
+    padding-bottom: 20px;
+}
+.learn-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(173, 216, 230, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.learn-more-button:hover {
+    background-color: #3b82f6;
+}
+/*------------ ABOUT / CV ----------------*/
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.articles {
+    background-color: rgba(173, 216, 230, 0.8);
+    flex: 1 1 30%;
+    border-radius: 5%;
+    text-align: center;
+    margin: 10px;
+    font-family: "Poppins", "Roboto", sans-serif;
+    color: #1e3a8a;
+}
+.article-p {
+    padding: 10px;
+}
+section h1 {
+    flex-basis: 100%; /* tar upp hela bredden av section */
+    text-align: center;
+    margin-bottom: 20px; /* mellanrum mellan h1 och artiklar */
+    color: #1e3a8a;
+    font-family: "Poppins", "Roboto", sans-serif;
+}
+
+/*------------- FORMULÄR ------------*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 20px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+label {
+    text-align: center;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    max-width: 400px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type=submit] {
+    grid-column: 2/ 3;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    background-color: #0056b3;
+}
+
+/*------------- HAMBURGARMENY --------------*/
+
+/* döljer nav på små skärmar och visar h-meny */
+#myLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+#myLinks li {
+    display: inline;
+}
+
+/* visas när h-meny är aktiv */
+.hamburger-menu {
+    display: none;
+}
+
+/* när h-meny är aktiverad */
+.responsive {
+    display: block;
+    position: absolute;
+    background-color: #1e293b;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* när skärmen är smalare än 768px */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* visar hamburgermenyn */
+    }
+
+    #myLinks {
+        display: none; /* döljer navigeringen på små skärmar */
+        width: 100%;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    #myLinks li {
+        width: 100%; /* gör varje listobjekt till en ny rad */
+        text-align: center;
+    }
+}
+
+
+/*---------- FOOTER --------------*/
+footer {
+    display: flex; /* aktiverar flexbox */
+    justify-content: space-around; /* h-justering / mitten av containern */
+    align-items: center; /* v-justering / mitten av containern */
+    padding: 10px 20px; /* utrymme mellan container och ram */ 
+    position: relative; /* footer sitter på */
+    width: 100%; /* container täcker hela skärmen */
+    z-index: 1; /* håller footer över element om nödvändigt */
+    margin-top: auto; /* lägger foot. längst ner på sidan */
+    background-color: #1e293b;
+}
+
+footer nav ul {
+    display: flex; 
+    flex-direction: row; /* lägger listobjekt på rad */
+    list-style-type: none; /* tar bort punkter från listan */
+    margin: 0%; /* tar bort standardmarginaler */
+    padding: 10px 0; /* */
+    gap: 20px; /* mellanrum mellan listobjekt */
+}
+
+footer p {
+    font-family: "Poppins", "Roboto", sans-serif;
+    color: #1e3a8a; 
+}
+
+footer nav a {
+    white-space: nowrap; /* förhindra radbrytning i länkarna */
+    text-decoration: none; /* ta bort understryckning */
+    border: 2px solid transparent; /* ram som syns vid hover */
+    padding: 5px 10px; /* padding för bättre synlighet */
+    font-family: "Open Sans", "Roboto", sans-serif;
+    color: #3b82f6;
+}
+
