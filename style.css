@@ -241,11 +241,17 @@ input[type=submit]:hover {
 
     #myLinks {
         display: none; /* döljer navigeringen på små skärmar */
-        width: 100%;
     }
 
     .responsive {
-        display: block;
+        display: flex; /* synlig som flexbox */
+        flex-direction: column; /* vertikal på små skärmar */
+        position: absolute; 
+        background-color: #1e293b;
+        width: 100%;
+        top: 50px;
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     #myLinks li {
