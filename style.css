@@ -291,3 +291,33 @@ footer nav a {
     color: #3b82f6;
 }
 
+
+/*-------- MEDIA QUERIES ---------*/
+
+/*-- mobil och tablet --*/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* header vertikal */
+        align-items: flex-start; /* justera till vänster */
+        padding: 10px;
+    }
+    .hero-image {
+        background-size: contain; /* anpassa bildstorlek */
+        height: 50vh; /* gör hero-image mindre */
+    }
+    nav ul {
+        flex-direction: column; /* vertikala nav-länkar */
+        gap: 10px; /* mindre mellanrum mellan länkar*/
+    }
+    article {
+        max-width: 90%; /* minskar artikel bredd */
+    }
+    .learn-more-button {
+        font-size: 14px; /* mindre knappstorlek */
+        padding: 8px 16px;
+    }
+    footer {
+        flex-direction: column; /* footer vertikal */
+        gap: 10px; /* mellanrum mellan footer element */
+    }
+}
